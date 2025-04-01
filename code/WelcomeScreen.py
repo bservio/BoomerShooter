@@ -2,23 +2,24 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import C_WHITE, WINDOW_W, WINDOW_H
+from code.Const import C_WHITE, WINDOW_W, WINDOW_H, C_YELLOW
 
 
 class WelcomeScreen:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./assets/MainBG.png')
+        self.surf = pygame.image.load('./assets/MainBG.png').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
         pygame.mixer_music.load('./assets/Menu.wav')
         pygame.mixer_music.play(-1)
+        pygame.mixer.music.set_volume(0.1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, 'BOOMER', C_WHITE, ((WINDOW_W / 2), 70), False, True)
             self.menu_text(50, 'shooter', C_WHITE, ((WINDOW_W / 2), 120), italic=True)
-            self.menu_text(25, 'PRESS ANY KEY TO START', (201, 220, 72), ((WINDOW_W / 2), 200))
+            self.menu_text(25, 'PRESS ANY KEY TO START', C_YELLOW, ((WINDOW_W / 2), 200))
             self.menu_text(10, 'Desenvolvido por Bruno Sérvio [RA 4514699]', C_WHITE, ((WINDOW_W / 2), WINDOW_H - 10))
 
             pygame.display.flip()
