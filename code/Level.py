@@ -1,10 +1,11 @@
 import sys
+import random
 
 import pygame.display
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import C_WHITE, WINDOW_H
+from code.Const import C_WHITE, WINDOW_H, EVENT_ENEMY, SPAWN_TIME
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 
@@ -18,6 +19,7 @@ class Level:
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('Level1Bg'))
         self.entity_list.append(EntityFactory.get_entity('Player1'))
+        pygame.time.set_timer(EVENT_ENEMY, SPAWN_TIME)
 
     def run(self, ):
         pygame.mixer_music.load(f'./assets/{self.name}.wav')
@@ -33,6 +35,10 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == EVENT_ENEMY:
+                    enemy_list = ('Asteroid', 'Asteroid2')
+                    random_enemy = random.choices(enemy_list, weights=[30,70])[0]
+                    self.entity_list.append(EntityFactory.get_entity(random_enemy))
 
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', C_WHITE, (10, 5))
             self.level_text(14, f'fps: {clock.get_fps() :.0f}', C_WHITE, (10, WINDOW_H - 35))

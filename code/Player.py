@@ -14,9 +14,9 @@ class Player(Entity):
 
         if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 0:
             self.rect.centery -= ENTITY_SPEED[self.name]
-        if pressed_key[PLAYER_KEY_DOWN[self.name]] and self.rect.top < WINDOW_H:
+        if pressed_key[PLAYER_KEY_DOWN[self.name]] and self.rect.bottom < WINDOW_H:
             self.rect.centery += ENTITY_SPEED[self.name]
-        if pressed_key[PLAYER_KEY_RIGHT [self.name]] and self.rect.top < WINDOW_W:
+        if pressed_key[PLAYER_KEY_RIGHT [self.name]] and self.rect.right < WINDOW_W:
             self.rect.centerx += ENTITY_SPEED[self.name]
         if pressed_key[PLAYER_KEY_LEFT[self.name]] and self.rect.left > 0:
             self.rect.centerx -= ENTITY_SPEED[self.name]

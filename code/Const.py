@@ -12,8 +12,14 @@ ENTITY_SPEED = {
     'Level1Bg1': 0,
     'Level1Bg2': 2,
     'Level1Bg3': 3,
-    'Player1': 3
+    'Player1': 3,
+    'Enemy1': 2,
+    'Enemy2': 3,
+    'Asteroid': 7,
+    'Asteroid2': 4
 }
+
+EVENT_ENEMY = pygame.USEREVENT + 1
 
 # M
 MENU_MOV = {
@@ -41,6 +47,10 @@ PLAYER_KEY_LEFT = {
 PLAYER_KEY_RIGHT = {
     'Player1': pygame.K_d,
 }
+
+# S
+
+SPAWN_TIME = 3000
 
 
 # W
