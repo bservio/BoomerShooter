@@ -2,7 +2,7 @@ import pygame
 
 # C
 
-C_WHITE = (255,255,255)
+C_WHITE: tuple[int, int, int] = (255,255,255)
 C_YELLOW = (201, 220, 72)
 
 # E
