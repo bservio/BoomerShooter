@@ -18,7 +18,7 @@ class WelcomeScreen:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, 'BOOMER', C_WHITE, ((WINDOW_W / 2), 70), False, True)
             self.menu_text(50, 'shooter', C_WHITE, ((WINDOW_W / 2), 120), italic=True)
-            self.menu_text(25, 'PRESS ENTER TO START', (201, 220, 72), ((WINDOW_W / 2), 200))
+            self.menu_text(25, 'PRESS ANY KEY TO START', (201, 220, 72), ((WINDOW_W / 2), 200))
             self.menu_text(10, 'Desenvolvido por Bruno Sérvio [RA 4514699]', C_WHITE, ((WINDOW_W / 2), WINDOW_H - 10))
 
             pygame.display.flip()
