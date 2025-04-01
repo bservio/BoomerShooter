@@ -12,6 +12,7 @@ ENTITY_SPEED = {
     'Level1Bg1': 0,
     'Level1Bg2': 2,
     'Level1Bg3': 3,
+    'Player1': 3
 }
 
 # M
@@ -24,6 +25,22 @@ MENU_MOV = {
 MENU_OPT = ('NEW GAME',
             'HALL OF FAME',
             'EXIT')
+
+
+# P
+
+PLAYER_KEY_UP = {
+    'Player1': pygame.K_w,
+}
+PLAYER_KEY_DOWN = {
+    'Player1': pygame.K_s,
+}
+PLAYER_KEY_LEFT = {
+    'Player1': pygame.K_a,
+}
+PLAYER_KEY_RIGHT = {
+    'Player1': pygame.K_d,
+}
 
 
 # W
