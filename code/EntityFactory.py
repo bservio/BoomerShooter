@@ -5,6 +5,7 @@ from code.Backgroung import Background
 from code.Const import WINDOW_W, WINDOW_H
 from code.Enemy import Enemy
 from code.Player import Player
+from code.PowerUp import PowerUp
 
 
 class EntityFactory:
@@ -32,3 +33,6 @@ class EntityFactory:
 
             case 'Asteroid2':
                 return Asteroid('Asteroid2', (WINDOW_W + 10, randint(40, WINDOW_H) - 40))
+
+            case 'PowerUp':
+                return PowerUp('PowerUp', (WINDOW_W + 10, randint(40, WINDOW_H) - 40))
