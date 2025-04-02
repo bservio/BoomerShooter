@@ -7,6 +7,18 @@ C_YELLOW = (201, 220, 72)
 
 # E
 
+ENTITY_HEALTH = {
+    'Level1Bg0': 999,
+    'Level1Bg1': 999,
+    'Level1Bg2': 999,
+    'Level1Bg3': 999,
+    'Player1': 100,
+    'Enemy1': 100,
+    'Enemy2': 100,
+    'Asteroid': 50,
+    'Asteroid2': 70,
+}
+
 ENTITY_SPEED = {
     'Level1Bg0': 1,
     'Level1Bg1': 0,
