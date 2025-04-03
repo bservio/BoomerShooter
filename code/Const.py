@@ -2,8 +2,11 @@ import pygame
 
 # C
 
-C_WHITE: tuple[int, int, int] = (255,255,255)
+C_WHITE = (255,255,255)
 C_YELLOW = (201, 220, 72)
+C_GREEN = (0, 128, 0)
+C_CYAN = (0, 128, 128)
+C_RED = (255, 102, 102)
 
 # E
 
@@ -44,6 +47,26 @@ ENTITY_HEALTH = {
     'PowerUp': 1
 }
 
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Level1Bg6': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Asteroid': 50,
+    'Asteroid2': 75,
+    'Enemy1': 100,
+    'Enemy1Shot': 0,
+    'Enemy2': 100,
+    'Enemy2Shot': 0,
+    'PowerUp': 0,
+
+}
+
 ENTITY_SPEED = {
     'Level1Bg0': 1,
     'Level1Bg1': 0,
@@ -51,7 +74,7 @@ ENTITY_SPEED = {
     'Level1Bg3': 3,
     'Player1': 3,
     'Enemy1': 2,
-    'Enemy1Shot': 3,
+    'Enemy1Shot': 6,
     'Enemy2': 3,
     'Asteroid': 7,
     'Asteroid2': 4,
@@ -61,13 +84,15 @@ ENTITY_SPEED = {
 
 ENTITY_SHOT_DELAY = {
     'Player1': 20,
-    'Enemy1': 100,
-    'Enemy2': 200,
+    'Enemy1': 50,
+    'Enemy2': 35,
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
 
 EVENT_POWERUP = pygame.USEREVENT + 2
+
+EVENT_TIMEOUT = pygame.USEREVENT + 3
 
 # M
 MENU_MOV = {
@@ -104,6 +129,10 @@ POWERUP_SPAWN_TIME = 1000
 # S
 
 SPAWN_TIME = 3000
+
+# T
+TIMEOUT_LEVEL = 20000
+TIMEOUT_STEP = 100
 
 
 # W
