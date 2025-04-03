@@ -23,7 +23,7 @@ class EntityFactory:
                 return Player('Player1', (10, (WINDOW_H/2)))
 
             case 'Enemy1':
-                return  Enemy('Enemy1', (WINDOW_W + 10, randint(40, WINDOW_H)-40))
+                return  Enemy('Enemy1', (WINDOW_W + 10, randint(40, WINDOW_H)-60))
 
             case 'Enemy2':
                 return Enemy('Enemy2', (WINDOW_W + 10, randint(40, WINDOW_H) - 40))

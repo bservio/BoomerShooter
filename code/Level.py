@@ -35,21 +35,23 @@ class Level:
         power_up_in_screen = 0
         while True:
             clock.tick(60)
+            events = pygame.event.get()
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
 
                 if isinstance(ent, (Player, Enemy)):
-                    shoot = ent.shoot()
+                    shoot = ent.shoot(events)
                     if shoot is not None:
                         self.entity_list.append(shoot)
-            for event in pygame.event.get():
+
+            for event in events:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
                 if event.type == EVENT_ENEMY:
-                    enemy_list = ('Asteroid', 'Asteroid2')
-                    random_enemy = random.choices(enemy_list, weights=[30,70])[0]
+                    enemy_list = ('Asteroid', 'Asteroid2', 'Enemy1')
+                    random_enemy = random.choices(enemy_list, weights=[30, 60, 10])[0]
                     self.entity_list.append(EntityFactory.get_entity(random_enemy))
                 if event.type == EVENT_POWERUP and power_up_in_screen == 0:
                     self.entity_list.append((EntityFactory.get_entity('PowerUp')))
