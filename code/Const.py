@@ -7,6 +7,8 @@ C_YELLOW = (201, 220, 72)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
 C_RED = (255, 102, 102)
+C_BLACK = (0,0,0)
+C_GRAY = (64,64,64)
 
 # E
 
@@ -139,3 +141,19 @@ TIMEOUT_STEP = 100
 
 WINDOW_W = 576
 WINDOW_H = 324
+
+SCORE_POS = {'Title': (WINDOW_W / 2, 50),
+             'EnterName': (WINDOW_W / 2, 80),
+             'Label': (WINDOW_W / 2, 90),
+             'Name': (WINDOW_W / 2, 110),
+             0: (WINDOW_W / 2, 110),
+             1: (WINDOW_W / 2, 130),
+             2: (WINDOW_W / 2, 150),
+             3: (WINDOW_W / 2, 170),
+             4: (WINDOW_W / 2, 190),
+             5: (WINDOW_W / 2, 210),
+             6: (WINDOW_W / 2, 230),
+             7: (WINDOW_W / 2, 250),
+             8: (WINDOW_W / 2, 270),
+             9: (WINDOW_W / 2, 290),
+             }

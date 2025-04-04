@@ -30,7 +30,7 @@ class Level:
         pygame.time.set_timer(EVENT_POWERUP, POWERUP_SPAWN_TIME)
         pygame.time.set_timer(EVENT_TIMEOUT, TIMEOUT_STEP)
 
-    def run(self, player_score: int):
+    def run(self, ) -> tuple[bool, int]:
         pygame.mixer_music.load(f'./assets/{self.name}.wav')
         pygame.mixer_music.play(-1)
         pygame.mixer_music.set_volume(0.1)
@@ -67,14 +67,14 @@ class Level:
                     if self.timeout == 0:
                         for ent in self.entity_list:
                             if isinstance(ent, Player):
-                                player_score = ent.score
-                        return True
+
+                                return True, ent.score
                 player_found = False
                 for ent in self.entity_list:
                     if isinstance(ent, Player):
                         player_found = True
                 if not player_found:
-                    return False
+                    return False, 0
 
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', C_WHITE, (10, 5))
             self.level_text(14, f'fps: {clock.get_fps() :.0f}', C_WHITE, (10, WINDOW_H - 35))
