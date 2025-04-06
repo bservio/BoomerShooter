@@ -130,10 +130,10 @@ POWERUP_SPAWN_TIME = 1000
 
 # S
 
-SPAWN_TIME = 3000
+SPAWN_TIME = 2500
 
 # T
-TIMEOUT_LEVEL = 20000
+TIMEOUT_LEVEL = 30000
 TIMEOUT_STEP = 100
 
 
@@ -145,7 +145,7 @@ WINDOW_H = 324
 SCORE_POS = {'Title': (WINDOW_W / 2, 50),
              'EnterName': (WINDOW_W / 2, 80),
              'Label': (WINDOW_W / 2, 90),
-             'Name': (WINDOW_W / 2, 110),
+             'Name': (WINDOW_W / 2, 130),
              0: (WINDOW_W / 2, 110),
              1: (WINDOW_W / 2, 130),
              2: (WINDOW_W / 2, 150),
